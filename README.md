@@ -25,65 +25,37 @@ Oil price data (economic indicator)
 Holiday and event information
 The dataset spans multiple years and includes strong seasonal patterns.
 
-## Methodology
-1️⃣ Data Loading & Optimization
-Memory-safe CSV loading
-Datetime conversion
-Data type optimization (int16, float32, categorical encoding)
-Forward-filling missing oil prices
+## Business Application & Planning Impact
+This forecasting model helps businesses in the following ways:
 
-2️⃣ Feature Engineering
-The following features were created:
-📅 Date Features
-Year
-Month
-Day
-Day of week
+1️⃣ Inventory Planning
+Avoid overstocking slow-moving products
+Prevent stockouts during high-demand periods
+Optimize warehouse space
+Example:
+If the model predicts higher beverage sales next weekend, the store can increase inventory beforehand.
 
-🔁 Lag Feature
-lag_7 (sales from 7 days ago)
-This captures weekly seasonality, which is a strong signal in retail forecasting.
+2️⃣ Workforce Planning
+Schedule more staff on high-demand days
+Reduce labor costs during low-demand periods
+Example:
+If weekend sales are forecasted to increase, managers can adjust staffing schedules accordingly.
 
-🎉 Holiday Indicator
-Binary flag indicating holiday presence
+3️⃣ Revenue & Budget Forecasting
+Estimate upcoming revenue
+Plan financial targets
+Manage cash flow
+The forecast gives an early view of expected sales performance.
 
-⛽ External Economic Feature
-Daily oil price (forward-filled)
+4️⃣ Promotion Strategy
+Identify which products respond to promotions
+Plan discounts during slow sales periods
+Forecast sales uplift during holidays
 
-🏪 Encoded Categorical Variables
-Store
-Product family
-City
-State
-Store type
-
-🤖 Model Selection
-Model used: GradientBoostingRegressor (scikit-learn)
-
-Why Gradient Boosting?
-Strong performance on structured/tabular data
-Handles nonlinear relationships
-Provides feature importance
-Stable and interpretable
-
-📈 Model Evaluation
-Data was split using an 80/20 time-based split to preserve chronological order.
-Evaluation Metric:
-RMSE (Root Mean Squared Error)
-
-Example result: Validation RMSE ≈ 450
-
-This indicates the model successfully captures trends and weekly seasonality while handling variability in sales.
-
-📊 Generated Outputs
-
-After running the pipeline, the following artifacts are created:
-
-File	                      Description
-submission.csv	           Final forecast predictions
-validation_plot.png	       Actual vs Predicted sales comparison
-feature_importance.png	   Feature importance visualization
-metrics.txt	               Validation RMSE
+5️⃣ Supply Chain Optimization
+Inform suppliers about expected demand
+Reduce emergency restocking
+Improve delivery scheduling
 
 ## Key Insights
 
