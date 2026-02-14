@@ -15,6 +15,8 @@ Clean and modular ML pipeline design
 
 ## Dataset Description
 
+Dataset Used: https://www.kaggle.com/competitions/store-sales-time-series-forecasting
+
 The dataset contains:
 Daily sales per store and product family
 Promotion indicators
