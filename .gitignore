@@ -1,0 +1,12 @@
+# Data files
+*.csv
+data/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Outputs
+outputs/
+*.png
